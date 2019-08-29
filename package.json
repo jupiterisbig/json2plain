@@ -30,5 +30,5 @@
   "engines": {
     "node": "*"
   },
-  "repository": "git://github.com/jarradseers/json2plain"
+  "repository": "https://github.com/jupiterisbig/json2plain"
 }
