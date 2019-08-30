@@ -12,7 +12,8 @@ var json = {
   "p":"i know right",
   "o":{"nope":"yep","prince":"harry","df":"dfdf"},
   "tup":"tuk true",
-  "new":{"red":"car","love":"harry"}
+  "new":{"red":"car","love":"harry"},
+  "parentkey":{"nag":[{"piom":"now"},{"ish":"cone"}]} 
 };
 
 function space2underline(string) {
