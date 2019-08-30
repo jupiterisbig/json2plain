@@ -1,4 +1,5 @@
-var json2plain = require('../');
+var json2plain = require('../lib/json2plain');
+var plain2json = require('../lib/plain2json');
 
 var json = {
   "key1":{"lol":{"key1innerkey1":"val1293","key1innerkey2":"val9230"}},
@@ -7,14 +8,11 @@ var json = {
   "key4":["run","go","come"],
   "key5":{"nag":["piom","treat","ish","cone"]},
   "key6":900,
-  "key7":{"joy":[{"rita":"joh","opera":"mini"},{"rita":"jude","opera":"lala"}]},
   "poop":{"why":"me"},
   "p":"i know right",
-  "o":{"nope":"yep","prince":"harry"},
-  "q":{"dock":[{"why":"it"},{"why":"rim"}]},
+  "o":{"nope":"yep","prince":"harry","df":"dfdf"},
   "tup":"tuk true",
-  "new":{"red":"car","love":"harry"},
-  "quit":{"doing":[{"all":"them"},{"all":"view"}]}
+  "new":{"red":"car","love":"harry"}
 };
 
 function space2underline(string) {
@@ -28,4 +26,9 @@ var options = {
 };
 
 var plain = json2plain(json, options);
-console.log(plain);
+console.log(plain + '\n');
+
+var json = plain2json(plain);
+json = '{' + json + '}'
+console.log(json);
+console.log(JSON.parse(json));
